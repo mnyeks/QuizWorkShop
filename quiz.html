@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="jquery.min.js"></script>
+	<title>My Quiz</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<style>
+   body {
+    background-color: coral;
+   }
+	</style>
+	<script type="text/javascript">
+	alert("script button to work") 
+	$(function(){   
+    $("#quiz").on('submit', function(evt){
+      evt.preventDefault();
+      var answers = $(this).serializeArray();
+
+      var answersString =JSON.stringify(answers); 
+      alert(answersString);
+
+     //alert$(this).serializeArray()[].name);
+    // how to check the answer?
+    // create a space on the right side to show the score....
+
+     });    
+	});
+	</script>
+
+</head>
+<body>
+  <form id="quiz">
+	<div class="container">
+	<h1>MY SPORT QUIZ</h1>
+	
+
+   <h2>What is the most popular sport in S.A?</h2>
+   <div class="radio">
+    <label>
+    <input type="radio" name="optionRadios" id="optionRadios2" value="option1">
+    Cricket
+    </label>
+   </div>
+   <div class="radio">
+    <label>
+    <input type="radio" name="optionRadios" id="optionRadios2" value="option2">
+    Soccer
+    </label>
+   </div>
+   <div class="radio">
+    <label>
+    <input type="radio" name="optionRadios" id="optionRadios2" value="option3">
+    Rugby
+    </label>
+   </div>
+   
+   <h2>For which sport do you need a racket?</h2>
+   <div class="radio">
+    <label>
+    <input type="radio" name="optionRadios" id="optionRadios2" value="option1">
+    Basketball
+    </label>
+   </div>
+   <div class="radio">
+    <label>
+    <input type="radio" name="optionRadios" id="optionRadios2" value="option1">
+    Netball
+    </label>
+   </div>
+   <div class="radio">
+    <label>
+    <input type="radio" name="optionRadios" id="optionRadios2" value="option1">
+    Tennis
+    </label>
+   </div>
+   
+   <h2>Which sport use the word 'Howzit'?</h2>
+   <div class="radio">
+    <label>
+    <input type="radio" name="optionRadios" id="optionRadios2" value="option1">
+    Cricket
+    </label>
+   </div>
+   <div class="radio">
+    <label>
+    <input type="radio" name="optionRadios" id="optionRadios2" value="option1">
+    Hockey
+    </label>
+   </div>
+   <div class="radio">
+    <label>
+    <input type="radio" name="optionRadios" id="optionRadios2" value="option1">
+    Waterpolo
+    </label>
+   </div>
+  
+   <button id="button" class="btn btn-warning" type="submit">submit
+    
+   </button>
+</div>
+ </form>
+ <script src="bootstrap.min.js"></script>
+</body>
+</html>
+		
