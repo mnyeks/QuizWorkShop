@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head><title>Your choice form</title>
+<script src="jquery.min.js"></script>
+
+<link rel="stylesheet" href="bootstrap.min.css">
+
+<script type="text/javascript">
+	$(function(){
+		$("#sportquizz").submit(function(evt){
+			
+			// read up about this
+			evt.preventDefault();
+
+			// https://api.jquery.com/serializeArray/
+			var answers = $(this).serializeArray();
+
+			var answersString = JSON.stringify(answers);
+			alert(answersString);
+            
+
+             $('#answers').html("Wow!"); 
+			});
+}); 
+
+	</script>
+	<style>
+  body {
+   background-color: coral;
+  }
+	</style>
+</head>
+<body>
+	<div class="row">
+  <div class="col-md-6 bg-primary">
+
+	<div class="container">
+	<form id="sportquizz">
+	<h1>My sport quizz</h1>
+    
+<br>
+	Your name:<br>
+<input type="text" placeholder="firstname">
+<br>
+	Address:
+<br>
+<input type="email" placeholder="email addreess">
+
+<h2>what is the most popular sport in S A?</h2>
+<div class="popular">
+  <input type="radio" name="Q1" value="Ice hockey"> Ice hockey
+  <br>
+  <input type="radio" name="Q1" value="rugby"> Rugby
+  <br>
+   <input type="radio" name="Q1" value="soccers"> Soccer
+
+</div>
+
+	<h2>For which sport do you use racket:</h2>
+<div class="racket">
+	<input type="radio"  name="Q2" value="tennis">Tennis
+	<br>
+	<input type="radio" name="Q2" value="netball">Netball
+	<br>
+	<input type="radio" name="Q2" value="Softball">Softball
+</div>
+	
+	<h2>which sport use the word 'love'?</h2>
+<div class="love">
+	<input type="radio" name"Q3" value="football">Football
+	<br>
+	<input type="radio" name="Q3" value="swimming">Swimming
+	<br>
+	<input type="radio" name="Q3" value="tennis">Tennis
+
+</div>
+<button type="submit" id="clickButton" class="btn btn-success">Submit</button>
+</form>
+
+</div>
+</div>
+
+<div class="col-md-6 bg-warning">
+ <h1>Score</h1>
+
+ <div id="Answers">	
+ </div>
+</div>
+</div>
+</body>
+</html>
